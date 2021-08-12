@@ -73,7 +73,7 @@ function App() {
   //add input value to number func
   const handleSubmit = (e) => {
     setNumber((prevNum) => prevNum + Number(tempNum));
-    document.getElementById("numInput").value = 0;
+    document.getElementById("numInput").value = '';
 
     //play sound
     let willCount = new Audio(IWillCount);
