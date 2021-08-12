@@ -67,14 +67,15 @@ function App() {
   const handleChange = (e) => {
     e.preventDefault();
     let temp = e.target.value;
-    console.log(temp);
-    setTempNum(e.target.value);
-    console.log(tempNum);
+    setTempNum(temp);
   };
 
   //add input value to number func
   const handleSubmit = (e) => {
     setNumber((prevNum) => prevNum + Number(tempNum));
+    document.getElementById("numInput").value = 0;
+
+    //play sound
     let willCount = new Audio(IWillCount);
 
     willCount.play();
